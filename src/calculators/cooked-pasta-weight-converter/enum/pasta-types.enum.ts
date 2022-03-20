@@ -1,0 +1,7 @@
+export enum PastaType {
+  PASTA_CORTA,
+  PASTA_LUNGA,
+  PASTA_UOVO_SECCA,
+  RISO,
+  PASTA_FRESCA_RIPIENA,
+}
