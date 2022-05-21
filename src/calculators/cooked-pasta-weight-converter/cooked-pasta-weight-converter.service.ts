@@ -8,7 +8,7 @@ export class CookedPastaWeightConverterService {
   public getCookedPastaWeight(
     getConvertedWeightDto: GetConvertedWeightDto,
   ): number {
-    const { pastaType: type, weight } = getConvertedWeightDto;
+    const { pasta_type: type, weight } = getConvertedWeightDto;
 
     const weightCoefficient = cookedWeightCoefficient[PastaType[type]];
 

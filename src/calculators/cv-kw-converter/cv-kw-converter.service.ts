@@ -8,7 +8,7 @@ export class CvKwConverterService {
   ): number {
     let convertedValue = null;
 
-    const { powerValue, quantity } = getConvertedPowerValueDto;
+    const { power_value: powerValue, quantity } = getConvertedPowerValueDto;
 
     switch (powerValue) {
       case 'CV':

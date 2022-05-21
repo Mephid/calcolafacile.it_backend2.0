@@ -9,9 +9,9 @@ export class PercentageService {
   ): number {
     let result = null;
 
-    const { calculate_value, x, y } = getCalculatedValueDTO;
+    const { calculate_value: calculateValue, x, y } = getCalculatedValueDTO;
 
-    switch (calculate_value) {
+    switch (calculateValue) {
       case ValueType.PART:
         result = this.calculatePart(x, y);
         break;
