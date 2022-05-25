@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { GetConvertedPowerValueDto } from './dto/get-converted-power-value.dto';
+import { Unit } from './enum/units.enum';
 
 @Injectable()
 export class CvKwConverterService {
@@ -11,10 +12,10 @@ export class CvKwConverterService {
     const { power_value: powerValue, quantity } = getConvertedPowerValueDto;
 
     switch (powerValue) {
-      case 'CV':
+      case Unit.CV:
         convertedValue = this.convertCvToKw(quantity);
         break;
-      case 'KW':
+      case Unit.KW:
         convertedValue = this.convertKwToCv(quantity);
         break;
 
