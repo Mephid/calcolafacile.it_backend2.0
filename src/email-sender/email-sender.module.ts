@@ -16,11 +16,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
           process.env.NODE_ENV == 'development' ||
           process.env.NODE_ENV == 'test';
 
-        console.log({
-          user: config.get('SMTP_USER'),
-          pass: config.get('SMTP_PSW'),
-        });
-
         return {
           transport: {
             host: 'smtps.aruba.it',
