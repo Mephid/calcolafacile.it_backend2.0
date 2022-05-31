@@ -1,5 +1,5 @@
 export enum Region {
-  ABRUZZO = 'ABB',
+  ABRUZZO = 'ABR',
   BASILICATA = 'BAS',
   CALABRIA = 'CAL',
   CAMPANIA = 'CAM',
