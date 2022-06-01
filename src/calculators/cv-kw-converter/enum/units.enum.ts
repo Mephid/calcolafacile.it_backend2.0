@@ -1,4 +1,4 @@
 export enum Unit {
-  KW = 'kW',
+  KW = 'KW',
   CV = 'CV',
 }
