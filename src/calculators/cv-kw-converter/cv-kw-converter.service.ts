@@ -6,7 +6,7 @@ import { Unit } from './enum/units.enum';
 export class CvKwConverterService {
   public getCookedPastaWeight(
     getConvertedPowerValueDto: GetConvertedPowerValueDto,
-  ): number {
+  ): { convertedPowerValue: Unit; convertedQuantity: number } {
     let convertedValue = null;
 
     const { power_value: powerValue, quantity } = getConvertedPowerValueDto;
@@ -27,10 +27,10 @@ export class CvKwConverterService {
   }
 
   private convertCvToKw(quantity: number) {
-    return quantity / 1.36;
+    return { convertedPowerValue: Unit.KW, convertedQuantity: quantity / 1.36 };
   }
 
   private convertKwToCv(quantity: number) {
-    return quantity * 1.36;
+    return { convertedPowerValue: Unit.CV, convertedQuantity: quantity * 1.36 };
   }
 }
