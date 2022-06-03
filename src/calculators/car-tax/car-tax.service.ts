@@ -20,7 +20,7 @@ export class CarTaxService {
       kw,
     );
 
-    return this.calculateCarTax(minAndMaxPrices, quantity);
+    return this.calculateCarTax(minAndMaxPrices, kw);
   }
 
   private convertPowerValue(powerValue: Unit, quantity: number): number {
